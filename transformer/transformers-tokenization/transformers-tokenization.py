@@ -81,9 +81,6 @@ class SimpleTokenizer:
         """
         #print(ids)
         text=""
-        #id_=[4,9]
-        id_=[999,4]
-        text1=""
         for id in ids:
             if id in self.id_to_word:
                 text=text+" "+self.id_to_word[id]
@@ -92,14 +89,6 @@ class SimpleTokenizer:
 
         text=text.strip()
 
-        for id in id_:
-            if id in self.id_to_word:
-                text1=text1+" "+self.id_to_word[id]
-            else:
-                text1=text1+" "+"<UNK>"
-
-        text1=text1.strip()
-        print(text1)
 
         #print(text)
                 
